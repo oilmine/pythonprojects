@@ -1,13 +1,20 @@
-# NOTE: Very basic and bugged, don't use as reference.
-
 import time
 import random
 
-x = True
+user = [-1]
+cmp = [0]
+nxt = 2
 
-while x == True:
-    u = int(input("u -> "))
-    print("")
-    time.sleep(0.5)
-    print("c ->", u + 1)
+while 1 + 2 == 3:
+    num = int(input("> "))
+    user.append(num)
+    time.sleep(random.uniform(0.3, 1))
 
+    nxt = num + 1
+    cmp.append(nxt)
+
+    if cmp[-1] - 3 != user[-2]:
+        print("You miscounted! Try again. The next number is 1.")
+        break
+
+    print("~>", nxt)
